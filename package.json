@@ -1,0 +1,8 @@
+{
+  "name": "desafio-linx",
+  "version": "1.0.0",
+  "description": "Projeto de layout landing page para desafio frontend Linx",
+  "main": "index.js",
+  "author": "Joao Luiz",
+  "license": "MIT"
+}
