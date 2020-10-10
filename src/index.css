@@ -70,11 +70,17 @@ body{
   text-decoration: none;
 }
 
+
+/* Conteúdo */
+
 .main{
  /* grid-area: main;*/
   background-color: beige;
   height: 100vh
 }
+
+
+
 
 .footer{
   /*grid-area: footer;*/
@@ -84,6 +90,13 @@ body{
   height: 150px;
   bottom: 0;
 }
+
+
+
+
+
+
+
 
 @media screen and (max-width: 410px){
   .header__h1{
