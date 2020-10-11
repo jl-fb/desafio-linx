@@ -64,7 +64,9 @@ async function setPage(){
     // let test =  data.products.map(ele => {
     //   return setProductCard(ele)
     // })
-    
+    data.products.forEach(ele => {
+      InsertAfterElement(section, setProductCard(ele))
+    })
   }
 }
 
