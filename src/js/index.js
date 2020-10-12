@@ -4,10 +4,9 @@
  */
 import '../global.css'
 import './index.css'
-import {CreateElement, InsertAfterElement, InsertBeforeElement, Log, QuerySelector}  from "../utils/utils.js";
+import {InsertAfterElement, Log, QuerySelector}  from "../utils/utils.js";
 import  getProductsService  from "../services/products.js"
 import loading from '../components/loading/loading.js'
-import productCard from '../components/productCard/productCard.js'
 import setProductCard from '../components/productCard/productCard.js';
 
 const page = 1
@@ -30,25 +29,7 @@ const btnGetProducts = QuerySelector('[get-products]')
 
 
 // Iniciando Estado do component main com um loader para ter produtos para mostrar
-setPage()
-
-// async function setProducts(products){
-//   console.log("PRODUTOS", productList)
-//   console.log("PRODUTOS", products)
-//   return [...productList, productList]
-// } 
-
-
-const getProducts = async (e) => {
-  e.preventDefault()
-  const response =  await getProductsService(page)
-  data = {...response}  
-}
-
-Log("ALOOOOO", divMain)
-Log("MAIN", main)
-Log("MAIN3", main[0])
-async function setPage(){
+const setPage = async () => {
   const response =  await getProductsService(1)
   data = {...response}
 
@@ -69,6 +50,45 @@ async function setPage(){
     })
   }
 }
+
+setPage()
+// async function setProducts(products){
+//   console.log("PRODUTOS", productList)
+//   console.log("PRODUTOS", products)
+//   return [...productList, productList]
+// } 
+
+function setPoductsToPage(products){
+  products.forEach(prod => {
+    InsertAfterElement(section, setProductCard(prod))
+  })
+}
+
+
+const getProducts = async (e) => {
+  
+  e.preventDefault()
+  let nextPage = data.nextPage.split('page=')
+  const response =  await getProductsService(nextPage[1])
+  Log("DATA1888888821", response)
+  Log("DATA12", data.producs )
+
+  data = {...data, ...response}
+  Log("DATA1888888821", data)
+  data = {
+    nextPage: response.nextPage,
+    products: [...data.products, ...response.products]
+  }
+  
+  setPoductsToPage(data.products)
+  Log("DATA12", {...data} )
+ }
+Log("ALOOOOO", divMain)
+Log("MAIN", main)
+Log("MAIN3", main[0])
+
+
+
 
 btnGetProducts.onclick = getProducts
 

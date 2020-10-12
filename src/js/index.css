@@ -132,13 +132,7 @@ body{
 }
 
 .main__button-send{
-  align-self: stretch;
   height: 3.9rem;
-  text-decoration: none;
-  color: var(--color-text-secondary);
-  background-color: transparent;
-  border: 1px solid var(--color-background-ton_2);
-  border-radius: 0.4rem;
   margin-bottom: 9rem;
 }
 
@@ -169,7 +163,11 @@ body{
   color: var(--color-text-secondary);
   font-weight: bold;
 }
-
+.section__button-more{
+  height: 3.9rem;
+  margin-top: 3.8rem;
+  margin-bottom: 9rem;
+}
 
 .footer{
   /*grid-area: footer;*/
