@@ -32,7 +32,12 @@ export function SetPoductsToPage(parent, products) {
     InsertAfterElement(parent, SetProductCard(prod))
   })
 }
-
+export function SetPoductsToPageAppend(parent, products) {
+  Log('APEND', parent)
+  products.forEach((prod) => {
+    parent.append(SetProductCard(prod))
+  })
+}
 export function IsValidCPF(cpf) {
   const pattern = /^(\d{3})(\d{3})(\d{3})(\d{2})$/g
   const validNumber = pattern.test(cpf)

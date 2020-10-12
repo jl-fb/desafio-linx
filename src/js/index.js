@@ -4,7 +4,7 @@
  */
 import '../global.css'
 import './index.css'
-import {IsValidCPF, IsValidEmail, Log, QuerySelector, SetPoductsToPage, HideElement}  from "../utils/utils.js";
+import {IsValidCPF, IsValidEmail, Log, QuerySelector, SetPoductsToPage, HideElement, SetPoductsToPageAppend}  from "../utils/utils.js";
 import  getProductsService  from "../services/products.js"
 import Loading from '../components/loading/loading.js'
 
@@ -27,7 +27,7 @@ let formInvite = {
 // Eementos da DOM
 const divMain = QuerySelector('.main')
 const main = QuerySelector('#main')
-const section = QuerySelector('#section-products').firstElementChild
+const section = QuerySelector('#section-products')
 const btnGetProducts = QuerySelector('[get-products]')
 
 // Iniciando Estado do component main com um loader para ter produtos para mostrar
@@ -44,7 +44,7 @@ const setPage = async () => {
     // let test =  data.products.map(ele => {
     //   return setProductCard(ele)
     // })
-    SetPoductsToPage(section, data.products)
+    SetPoductsToPageAppend(section, data.products)
   }
 }
 
