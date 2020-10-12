@@ -1,6 +1,9 @@
 /**
  * @format
  */
+
+import SetProductCard from '../components/productCard/productCard'
+
 export function Log(text = '', v) {
   console.log(`${text}`, v)
 }
@@ -25,4 +28,10 @@ export function InsertBeforeElement(parent, child) {
 
 export function InsertAfterElement(parent, child) {
   parent.insertAdjacentElement('afterend', child)
+}
+
+export function SetPoductsToPage(parent, products) {
+  products.forEach((prod) => {
+    InsertAfterElement(parent, SetProductCard(prod))
+  })
 }

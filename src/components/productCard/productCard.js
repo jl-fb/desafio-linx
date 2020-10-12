@@ -5,7 +5,7 @@
 import './productCard.css'
 import * as utils from '../../utils/utils.js'
 
-function setProductCard(ele) {
+function SetProductCard(ele) {
   const productCard = utils.CreateElement('div', 'section__product-card')
   const productImg = utils.CreateElement('img', 'section__product-img')
   const productInfo = utils.CreateElement('div', 'section__product-infos')
@@ -42,4 +42,4 @@ function setProductCard(ele) {
 // productImg.classList.add('section__product-img')
 // productInfo.classList.add('section__product-infos')
 
-export default setProductCard
+export default SetProductCard

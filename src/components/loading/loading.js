@@ -1,4 +1,3 @@
-import { doc } from 'prettier'
 /*
  @format
  */
@@ -10,7 +9,7 @@ divLoad.insertAdjacentElement('afterbegin', load)
 divLoad.classList.add('divLoader')
 load.classList.add('divLoader__loader')
 
-const loading = (show, element) => {
+const Loading = (show, element) => {
   console.log('LOAD2', load)
   console.log('DOCUMENT', element)
   console.log('SHOWW', show)
@@ -19,4 +18,4 @@ const loading = (show, element) => {
   console.log('LOAD', load)
   element.insertAdjacentElement('afterbegin', divLoad)
 }
-export default loading
+export default Loading

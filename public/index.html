@@ -30,7 +30,7 @@
       <main id="main">
         <div class="main">
           <h1 class="main__h1">Ajude o algorítimo a ser mais certeiro</h1>
-          <p class="main__p">
+          <p class="p main__p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
             ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus
             erat sed interdum dignissim. Suspendisse semper pretium consectetur.
@@ -47,52 +47,52 @@
             suscipit libero, at mattis augue est vel metus.
           </p>
 
-          <form action="" method="post" class="main__form">
-            <div class="main__input-group">
-              <label class="main__label" for="name">Seu nome:</label>
-              <input type="text" name="name" id="nameInput" class="main__input" />
+          <form id="formNewsletter" class="form" action="#" method="POST">
+            <div class="form__input-group">
+              <label class="form__label" for="name">Seu nome:</label>
+              <input type="text" name="name" id="name" class="form__input" required />
             </div>
-            <div class="main__input-group">
-              <label class="main__label" for="name">E-mail:</label>
-              <input type="text" name="name" id="nameInput" class="main__input" />
+            <div class="form__input-group">
+              <label class="form__label" for="name">E-mail:</label>
+              <input type="text" name="name" id="email" class="form__input" required />
             </div>
-            <div class="main__input-group">
-              <label class="main__label" for="name">CPF:</label>
-              <input type="text" name="name" id="nameInput" class="main__input" />
+            <div class="form__input-group">
+              <label class="form__label" for="name">CPF:</label>
+              <input type="text" name="cpf" id="cpf" class="form__input" required />
             </div>
-            <div class="main__radio-group">
-              <div class="main__input-radio-group">
+            <div class="form__radio-group">
+              <div class="form__input-radio-group">
                 <input
                   type="radio"
                   id="male"
                   name="gender"
                   value="male"
-                  class="main__input"
+                  class="form__input"
                 />
-                <label for="male" class="main__label">Masculino</label><br />
+                <label for="male" class="form__label">Masculino</label><br />
               </div>
-              <div class="main__input-radio-group">
+              <div class="form__input-radio-group">
                 <input
                   type="radio"
                   id="female"
                   name="gender"
                   value="female"
-                  class="main__input"
+                  class="form__input"
                 />
-                <label for="female" class="main__label">Feminino</label><br />
+                <label for="female" class="form__label">Feminino</label><br />
               </div>
-              <div class="main__input-radio-group">
+              <div class="form__input-radio-group">
                 <input
                   type="radio"
                   id="other"
                   name="gender"
                   value="other"
-                  class="main__input"
+                  class="form__input"
                 />
-                <label for="other" class="main__label">Outro</label>
+                <label for="other" class="form__label">Outro</label>
               </div>
             </div>
-            <button send-formData type="submit" class="btn main__button-send">
+            <button formDataNewsletter type="submit" class="btn form__button-send">
               Enviar
             </button>
           </form>
@@ -103,14 +103,59 @@
               <hr class="section__line" />
             </div>
 
-            <!-- <div class="section__product-card">
-              <img src="" alt="product image" class="section__product-img" />
-              <div class="section__prod-formData" ></div>
-            </div> -->
-             <button get-products class="btn section__button-more">Ainda mais produtos aqui!</button>
+            <button get-products class="btn section__button-more">
+              Ainda mais produtos aqui!
+            </button>
+          </section>
+          <section id="section-invite" class="section">
+            <div class="section__head section__head-invite">
+              <hr class="section__line" />
+              <h1 class="section__h1">Compartilhe a novidade</h1>
+              <hr class="section__line" />
+            </div>
+            <p class="p section__p">
+              Quer que seus amigos também ganhem a lista personalizada deles? Preencha
+              agora!
+            </p>
+            <form action="./main.js" method="post" class="form">
+              <div class="form__input-group">
+                <label class="form__label" for="name"
+                  >Nome do seu/sua amigo/amiga:</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  id="nameInput"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <div class="form__input-group">
+                <label class="form__label" for="name">E-mail dele/dela:</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="nameInput"
+                  class="form__input"
+                  required
+                />
+              </div>
+              <button formDataInvite type="submit" class="btn form__button-send">
+                Enviar
+              </button>
+            </form>
+          </section>
         </div>
       </main>
-      <footer class="footer">RODAPÉ</footer>
+      <footer class="footer">
+        <div class="footer__content">
+          <h3 class="footer__h3">
+            Testando suas habilidades em HTML, CSS e JS. <br />
+            Linx Impulse <br />
+            2019
+          </h3>
+        </div>
+      </footer>
     </div>
     <script src="./main.js"></script>
   </body>

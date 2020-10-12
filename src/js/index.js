@@ -4,22 +4,25 @@
  */
 import '../global.css'
 import './index.css'
-import {InsertAfterElement, Log, QuerySelector}  from "../utils/utils.js";
+import {Log, QuerySelector, SetPoductsToPage}  from "../utils/utils.js";
 import  getProductsService  from "../services/products.js"
-import loading from '../components/loading/loading.js'
-import setProductCard from '../components/productCard/productCard.js';
+import Loading from '../components/loading/loading.js'
 
 const page = 1
 let data = {
   nextPage:"",
   products: []
 }
-
+let formNewsletter = {
+  name: "",
+  email: "",
+  cpf: "",
+  gender: false,
+}
 // Eementos da DOM
 const divMain = QuerySelector('.main')
 const main = QuerySelector('#main')
 const section = QuerySelector('#section-products').firstElementChild
-const section1 = QuerySelector('#section-products')
 const btnGetProducts = QuerySelector('[get-products]')
 
 // Log("SECTION", section)
@@ -37,17 +40,15 @@ const setPage = async () => {
   if(data.products.length === 0){
     Log("ENTROU IF", data.products.length)
     divMain.style.display = 'none'
-    loading(true, main)
+    Loading(true, main)
   }else{
     Log("LENG",data.products.length)
-    loading(false, main)
+    Loading(false, main)
     divMain.style.display ='block'
     // let test =  data.products.map(ele => {
     //   return setProductCard(ele)
     // })
-    data.products.forEach(ele => {
-      InsertAfterElement(section, setProductCard(ele))
-    })
+    SetPoductsToPage(section, data.products)
   }
 }
 
@@ -58,11 +59,6 @@ setPage()
 //   return [...productList, productList]
 // } 
 
-function setPoductsToPage(products){
-  products.forEach(prod => {
-    InsertAfterElement(section, setProductCard(prod))
-  })
-}
 
 
 const getProducts = async (e) => {
@@ -79,8 +75,8 @@ const getProducts = async (e) => {
     nextPage: response.nextPage,
     products: [...data.products, ...response.products]
   }
-  
-  setPoductsToPage(data.products)
+  Log("PRODUCSTeeee", data.products)
+  SetPoductsToPage(section, data.products)
   Log("DATA12", {...data} )
  }
 Log("ALOOOOO", divMain)
@@ -89,6 +85,6 @@ Log("MAIN3", main[0])
 
 
 
-
 btnGetProducts.onclick = getProducts
+
 

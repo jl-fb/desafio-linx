@@ -66,4 +66,81 @@ table {
   border: 1px solid var(--color-background-ton_2);
   border-radius: 0.4rem;
 }
+.p{
+	color: var(--color-text-secondary);
+  text-align: left;
+  font-size: 1.2rem;
+ 
+}
 
+.section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__head{
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section__line{
+  border: 0.7px solid var(--color-background-ton_2);
+  background-color: var(--color-background-ton_2);
+  width: 40%;
+}
+.section__h1{
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--color-text-secondary);
+  font-weight: bold;
+}
+.section__button-more{
+  height: 3.9rem;
+  margin-top: 3.8rem;
+  margin-bottom: 9rem;
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.form__input-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.form__input{
+  align-self: stretch;
+  margin-bottom: 0.8rem;
+  height: 3rem;
+}
+.form__label{
+  color: var(--color-text-secondary);
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+.form__radio-group{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.form__button-send{
+  height: 3.9rem;
+  margin-bottom: 9rem;
+}
