@@ -93,12 +93,39 @@ body{
   line-height: 1.8rem;
 }
 
-
-
 .section__head-invite{
   margin-bottom: 3rem;
 }
 
+
+.form__isValid-name{
+ display: none;
+}
+
+
+.form__isValid-cpf{
+  display: none;
+ }
+
+
+.form__isValid-email{
+  display: none;
+ }
+ 
+ .form__isValid-name-invite{
+ display: none;
+}
+
+
+.form__isValid-cpf-invite{
+  display: none;
+ }
+
+.form__isValid-email-invite{
+  display: none;
+ }
+ 
+ 
 .footer{
   display: flex;
   justify-content: center;

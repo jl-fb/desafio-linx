@@ -15,10 +15,7 @@ export function QuerySelector(query) {
 
 export function CreateElement(tagName = '', className = 'null') {
   const element = document.createElement(tagName)
-  console.log(className)
-  console.log('element', element)
   element.classList.add(className)
-  console.log('element', element)
   return element
 }
 
@@ -34,4 +31,27 @@ export function SetPoductsToPage(parent, products) {
   products.forEach((prod) => {
     InsertAfterElement(parent, SetProductCard(prod))
   })
+}
+
+export function IsValidCPF(cpf) {
+  const pattern = /^(\d{3})(\d{3})(\d{3})(\d{2})$/g
+  const validNumber = pattern.test(cpf)
+
+  return validNumber
+}
+
+export function IsValidEmail(email) {
+  const pattern = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/g
+  const valid = pattern.test(email)
+  return valid
+}
+
+export function SetMaskCPF(cpf) {
+  const pattern = /^(\d{3})(\d{3})(\d{3})(\d{2})$/g
+  const cpfMasked = cpf.replace(pattern, '$1.$2.$3-$4')
+  return cpfMasked
+}
+
+export function HideElement(...element) {
+  element.forEach((ele) => (ele.style.display = 'none'))
 }
