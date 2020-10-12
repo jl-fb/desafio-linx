@@ -139,6 +139,7 @@ body{
   background-color: transparent;
   border: 1px solid var(--color-background-ton_2);
   border-radius: 0.4rem;
+  margin-bottom: 9rem;
 }
 
 
@@ -166,20 +167,9 @@ body{
   text-align: center;
   font-size: 1.8rem;
   color: var(--color-text-secondary);
+  font-weight: bold;
 }
 
-.section__product-card{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.section__product-img{
-  border: 1px solid var(--color-background-ton_2);
-  height: 10rem;
-  width: 10rem;
-}
 
 .footer{
   /*grid-area: footer;*/
