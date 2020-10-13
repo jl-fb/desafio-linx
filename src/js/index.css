@@ -4,11 +4,6 @@
   display: grid;
   height: 100%;
   width: 100%;
-  /* grid-template-rows: 30vh 65vh 10vh;
-  grid-template-columns: repeat(1fr);
-  grid-template-areas: "header header"
-                       "main main"
-                       "footer footer"; */
 
 }
 
@@ -78,6 +73,11 @@ body{
  /* grid-area: main;*/
   background-color: var(--color-background);
   padding: 2.5rem 4rem 0rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: auto;
+
 }
 
 .main__h1{
@@ -193,19 +193,22 @@ body{
 
 @media screen and (min-width: 750px) and (max-width: 975px){
   .section{
-    align-items: center;
-    max-width: 60rem;
-    margin: 0 auto;
+    display: flex;;
+    max-width: 90rem;
+    align-items: unset;
+    flex-wrap:wrap;
+    margin:auto;
   }
   #section-products{
-   display: flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     height: 125rem;
     max-width: 28rem;
+    
   }
   .section__products{
-   margin-top: 5rem;
+    margin: 5rem 20% 0% 20%
   }
   .section__button-more{
    width: 30rem;
@@ -245,9 +248,11 @@ body{
 /* Layout desktop */
 @media screen and (min-width:975px){
   .section{
+    display: flex;
     align-items: flex-start;
     max-width: 900px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
   #section-products{
    display: flex;
@@ -291,7 +296,20 @@ body{
 }
 
 @media screen and (min-width: 1024px){
-
+  .section{
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  #section-products{
+   display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 650px;
+    max-width: 750px;
+  }
   .header{
       text-align: center;
   }

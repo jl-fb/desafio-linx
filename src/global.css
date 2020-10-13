@@ -76,8 +76,8 @@ table {
 .section{
   display:flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  max-width: 70rem;
 }
 
 .section__head{

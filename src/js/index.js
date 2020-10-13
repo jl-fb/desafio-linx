@@ -63,7 +63,7 @@ const getProducts = async (e) => {
     nextPage: response.nextPage,
     products: [...data.products, ...response.products]
   }
-  SetPoductsToPage(section, data.products)
+  SetPoductsToPageAppend(section, data.products)
 
  }
 
