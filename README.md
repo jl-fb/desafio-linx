@@ -4,7 +4,7 @@ Desafio para construção de um layout de uma landing page com um cadastro newsl
   <br/>
   <br/>
   <br/>
-### Teconolegias aplicadas: 
+### Teconologias utilizadas: 
   
   <br/>
   
