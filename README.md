@@ -48,7 +48,7 @@ A nomenclatura das classes CSS foram feitas buscando seguir o padrão *[BEM](htt
 
 ## Feature não alcançada
   * Não foi possível fazer o wrap dos produtos quando adicionado mais produtos na tela (na versão desktop )
-  * Também não coseguir dar o deploy da aplicação
+  * Também não consegui dar o deploy da aplicação
 
 
 <p id="obs"><strong>Nunca utilizei esse padrão foi algo que descobri a pouco tempo e foi uma oportunidade de tentar colocar em prática</strong></p>
