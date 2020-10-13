@@ -5,12 +5,9 @@
   "main": "index.js",
   "author": "Joao Luiz",
   "license": "MIT",
-  "engines": {
-    "node": "12.16.3"
-  },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "webpack"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
